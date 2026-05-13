@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Inter', -apple-system, sans-serif;
+}
+body {
+    background: radial-gradient(circle at 10% 30%, #fff1e4, #ffe2cf);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.edit-container {
+    max-width: 680px;
+    width: 100%;
+    background: #fffff8;
+    border-radius: 2rem;
+    box-shadow: 0 30px 40px rgba(0,0,0,0.15);
+    border: 1px solid #ffdbb5;
+    overflow: hidden;
+}
+.edit-header {
+    background: #f2e1cf;
+    padding: 1.4rem 2rem;
+}
+.edit-header h2 {
+    font-size: 1.7rem;
+    color: #3f2c1b;
+}
+.product-id-badge {
+    background: #fff0e0;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+.edit-body {
+    padding: 2rem;
+}
+.field {
+    margin-bottom: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.field label {
+    font-weight: 700;
+    color: #684f34;
+    font-size: 0.8rem;
+}
+.field input {
+    padding: 0.8rem 1rem;
+    border-radius: 1.2rem;
+    border: 1.5px solid #eddccb;
+    background: #fefaf5;
+    font-size: 0.95rem;
+}
+.field input:focus {
+    border-color: #f6ab6c;
+    outline: none;
+}
+.row-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.btn-update {
+    background: #cb7b3c;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: 0.15s;
+}
+.btn-update:hover {
+    background: #b16229;
+}
+.btn-cancel {
+    background: #e0cfbe;
+    border: none;
+    padding: 0.7rem;
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: #aa7d55;
+}
+.error-box {
+    background: #ffe6e1;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #b13e1a;
+    text-align: center;
+}
+footer {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 1rem;
+    background: #f9efe5;
+    color: #ad8260;
+}
+.global-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2e3820;
+    color: #ffefdb;
+    padding: 8px 22px;
+    border-radius: 60px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+    z-index: 1200;
+}
+@media (max-width: 550px) {
+    .row-split { grid-template-columns: 1fr; }
+    .edit-body { padding: 1.5rem; }
+}
