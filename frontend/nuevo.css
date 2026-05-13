@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, 'Inter', sans-serif;
+}
+body {
+    background: linear-gradient(125deg, #faf0e1 0%, #fce9d4 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.form-card {
+    max-width: 650px;
+    width: 100%;
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 30px 45px -20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: 0.2s;
+    border: 1px solid #ffdfbf;
+}
+.form-header {
+    background: #fbe6cf;
+    padding: 1.6rem 2rem;
+    border-bottom: 2px solid #ffcf9a;
+}
+.form-header h2 {
+    font-size: 1.8rem;
+    color: #422f1d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-header p {
+    color: #aa7b53;
+    margin-top: 8px;
+}
+.form-body {
+    padding: 2rem 2rem 2rem;
+}
+.form-group {
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-group label {
+    font-weight: 600;
+    color: #59412c;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+.form-group input {
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #eedbc8;
+    border-radius: 1.2rem;
+    font-size: 0.95rem;
+    transition: 0.2s;
+    background: #fefbf7;
+}
+.form-group input:focus {
+    border-color: #f3a261;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(243,162,97,0.2);
+}
+.row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.btn-submit {
+    background: #2c5f2d;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.15s;
+    margin-top: 0.8rem;
+}
+.btn-submit:hover {
+    background: #1f4520;
+    transform: scale(0.99);
+}
+.btn-back {
+    background: #e7d7c6;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-top: 12px;
+    width: 100%;
+    color: #5d3e24;
+}
+.btn-back:hover {
+    background: #dbcbbc;
+}
+.toast-msg {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2b1c;
+    color: #ffefdb;
+    padding: 10px 22px;
+    border-radius: 60px;
+    font-size: 0.8rem;
+    z-index: 1100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+@media (max-width: 550px) {
+    .row-2col { grid-template-columns: 1fr; }
+    .form-card { margin: 0; }
+}
